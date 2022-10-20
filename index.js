@@ -23,6 +23,9 @@
 
 // foo(0);
 
+const fs = require('fs');
+
+
 function myClock() {
       setInterval(function() {
       var date = new Date();
@@ -44,6 +47,12 @@ function myClock() {
       var clock = hours + ":" + minutes + ":" + second;
       
       console.log(clock);
+
+      fs.writeFile('./my_clock.txt', clock, () =>{
+
+      });
+
+      
    }, 1000);
 }
 myClock();
